@@ -7,4 +7,4 @@ before_install:
   - sudo apt-get install -y gawk lzip
 
 script:
-  - make AWK=gawk VALIDATE=':' tarballs
+  - make AWK=gawk VALIDATE=':' VERSION=-$(git rev-parse --short HEAD) tarballs_version
